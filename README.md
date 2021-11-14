@@ -49,6 +49,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - I used React Context to store global state to reduce prop drilling. This was especially useful given the level of abstraction of my components.
 - I chose not to make the app pixel perfect to the mockup, but it does follow the general structure presented in the mockup. The only real deviation is the padding around the sides of the grid. I chose to leave it as is provided by the React-Strap grid components, so I wouldn't have to write custom code to remove the side paddings.
 - I added just a few unit tests just to show my approach. I chose RTL because I love the new paradigm of doing unit testing from the user perspective. It's much easier to be accurate in what you test than the previous approach with Enzyme.
+- I didn't make small commits because I started with CRA and then realized it comes with its own repo, so I had coded everything and then initiated a new repo. At that point, I couldn't stage only specific lines and it was impossible to differentiate CRA default code and custom code I wrote.
 - I don't really have any questions for the design team in the context of this coding exercise.
 
 ## Spec on future functionality
