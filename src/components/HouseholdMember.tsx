@@ -7,15 +7,15 @@ interface IHouseholdMember {
 }
 
 const HouseholdMember: FC<IHouseholdMember> = ({
-  member: { name, description, fruit },
+  member: { firstName, lastName, description, favoriteFruit },
 }): ReactElement => (
   <Card body>
-    <h3>{name}</h3>
+    <h3>{`${firstName} ${lastName}`}</h3>
     <p>
       <strong>Description:</strong> {description}
     </p>
     <p>
-      <strong>Favorate Fruit:</strong> {fruit}
+      <strong>Favorate Fruit:</strong> {favoriteFruit}
     </p>
   </Card>
 );

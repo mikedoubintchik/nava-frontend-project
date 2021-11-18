@@ -1,16 +1,60 @@
 import { HouseholdMemberType } from "store";
 
 const householdMembers: HouseholdMemberType[] = [
-  { name: "Person 1", description: "Household contact", fruit: "apple" },
-  { name: "Person 2", description: "Household contact", fruit: "apple" },
-  { name: "Person 3", description: "Household contact", fruit: "apple" },
-  { name: "Person 4", description: "Household contact", fruit: "apple" },
-  { name: "Person 5", description: "Household contact", fruit: "apple" },
-  { name: "Person 6", description: "Household contact", fruit: "apple" },
-  { name: "Person 7", description: "Household contact", fruit: "apple" },
-  { name: "Person 8", description: "Household contact", fruit: "apple" },
-  { name: "Person 9", description: "Household contact", fruit: "apple" },
-  { name: "Person 10", description: "Household contact", fruit: "apple" },
+  {
+    firstName: "Person 1",
+    lastName: "Meow",
+    description: "Household contact",
+    favoriteFruit: "apple",
+  },
+  {
+    firstName: "Person 2",
+    lastName: "Meow",
+    description: "Household contact",
+    favoriteFruit: "apple",
+  },
+  {
+    firstName: "Person 3",
+    lastName: "Meow",
+    description: "Household contact",
+    favoriteFruit: "apple",
+  },
+  {
+    firstName: "Person 4",
+    lastName: "Meow",
+    description: "Household contact",
+    favoriteFruit: "apple",
+  },
+  {
+    firstName: "Person 5",
+    lastName: "Meow",
+    description: "Household contact",
+    favoriteFruit: "apple",
+  },
+  {
+    firstName: "Person 6",
+    lastName: "Meow",
+    description: "Household contact",
+    favoriteFruit: "apple",
+  },
+  {
+    firstName: "Person 7",
+    lastName: "Meow",
+    description: "Household contact",
+    favoriteFruit: "apple",
+  },
+  {
+    firstName: "Person 8",
+    lastName: "Meow",
+    description: "Household contact",
+    favoriteFruit: "apple",
+  },
+  {
+    firstName: "Person 9",
+    lastName: "Meow",
+    description: "Household contact",
+    favoriteFruit: "apple",
+  },
 ];
 
 export default householdMembers;

@@ -6,11 +6,13 @@ import AddHouseholdMemberForm from "../components/AddHouseholdMemberForm";
 interface IAddHouseholdMemberModal {
   showModal: boolean;
   toggleModal: Dispatch<SetStateAction<boolean>>;
+  modalHandler?: () => void;
 }
 
 const AddHouseholdMemberModal: FC<IAddHouseholdMemberModal> = ({
   showModal,
   toggleModal,
+  modalHandler,
 }): ReactElement => (
   <Modal show={showModal} onHide={() => toggleModal(false)}>
     <Modal.Header closeButton>
@@ -18,7 +20,12 @@ const AddHouseholdMemberModal: FC<IAddHouseholdMemberModal> = ({
     </Modal.Header>
 
     <Modal.Body>
-      <AddHouseholdMemberForm saveHandler={() => toggleModal(false)} />
+      <AddHouseholdMemberForm
+        saveHandler={() => {
+          toggleModal(false);
+          if (modalHandler) modalHandler();
+        }}
+      />
     </Modal.Body>
 
     <Modal.Footer>

@@ -14,22 +14,41 @@ const AddHouseholdMemberForm: FC<IAddHouseholdMemberForm> = ({
   const { dispatch } = useStore();
 
   const [householdMember, setMemberValue] = useState<HouseholdMemberType>({
-    name: "",
+    firstName: "",
+    lastName: "",
     description: "",
-    fruit: "",
+    favoriteFruit: "",
   });
 
-  const { name, description, fruit } = householdMember;
+  const { firstName, lastName, description, favoriteFruit } = householdMember;
 
   return (
     <Form>
-      <FloatingLabel controlId="floatingInput" label="Name" className="mb-3">
+      <FloatingLabel
+        controlId="floatingInput"
+        label="Member First Name"
+        className="mb-3"
+      >
         <Form.Control
           type="text"
-          placeholder="Member Name"
-          value={name}
+          placeholder="Member First Name"
+          value={firstName}
           onChange={(e) =>
-            setMemberValue({ ...householdMember, name: e.target.value })
+            setMemberValue({ ...householdMember, firstName: e.target.value })
+          }
+        />
+      </FloatingLabel>
+      <FloatingLabel
+        controlId="floatingInput"
+        label="Member Last Name"
+        className="mb-3"
+      >
+        <Form.Control
+          type="text"
+          placeholder="Member Last Name"
+          value={lastName}
+          onChange={(e) =>
+            setMemberValue({ ...householdMember, lastName: e.target.value })
           }
         />
       </FloatingLabel>
@@ -47,13 +66,20 @@ const AddHouseholdMemberForm: FC<IAddHouseholdMemberForm> = ({
           }
         />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingInput" label="Fruit" className="mb-3">
+      <FloatingLabel
+        controlId="floatingInput"
+        label="Favorite Fruit"
+        className="mb-3"
+      >
         <Form.Control
           type="text"
           placeholder="Favorite Fruit"
-          value={fruit}
+          value={favoriteFruit}
           onChange={(e) =>
-            setMemberValue({ ...householdMember, fruit: e.target.value })
+            setMemberValue({
+              ...householdMember,
+              favoriteFruit: e.target.value,
+            })
           }
         />
       </FloatingLabel>
